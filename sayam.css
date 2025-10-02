@@ -7,7 +7,8 @@ body {
   background: linear-gradient(135deg, #590D22, #800F2F);
   color: #FFF0F3;
   transition: background 10s ease-in-out;
-  touch-action: none;
+  touch-action: auto; /* default, scrolling works */
+
 }
 
 #letter {
@@ -92,6 +93,7 @@ body {
   border-radius: 8px;
   cursor: grab;
   transition: transform 0.3s;
+  touch-action: none; /* allows drag on polaroids only */
 }
 .polaroid:hover {
   transform: rotate(-5deg) scale(1.05);
@@ -119,3 +121,4 @@ body {
   .polaroid { width: 45%; }
   .memory-card { width: 100%; }
 }
+
